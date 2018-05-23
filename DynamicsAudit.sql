@@ -7,5 +7,5 @@ tmp.ObjectId as ObjectId, tmp.UserId as UserId, cast(tmp.ChangeData as nvarchar(
   LEFT OUTER JOIN SystemUser su ON su.SystemUserId = tmp.UserId
   LEFT OUTER JOIN SystemUser suo ON suo.SystemUserId = tmp.ObjectId
   LEFT OUTER JOIN SystemUser suc ON suc.SystemUserId = tmp.CallingUserId
-  Where tmp.CreatedOn>= %LAST_GATHERED_EVENT%
+  Where  CAST(tmp.CreatedOn as smalldatetime) >= %LAST_GATHERED_EVENT%
   ORDER By GMT asc
