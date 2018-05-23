@@ -8,4 +8,4 @@ tmp.ObjectId as ObjectId, tmp.UserId as UserId, cast(tmp.ChangeData as nvarchar(
   LEFT OUTER JOIN SystemUser suo ON suo.SystemUserId = tmp.ObjectId
   LEFT OUTER JOIN SystemUser suc ON suc.SystemUserId = tmp.CallingUserId
   Where tmp.CreatedOn>= %LAST_GATHERED_EVENT%
-  ORDER By GMT
+  ORDER By GMT asc
