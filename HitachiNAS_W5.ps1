@@ -17,6 +17,7 @@ $rules="<FieldInfo>
                     <Field Name=""What"" Constant=""File open handle closed""></Field>
                     <Field Name=""Object_Type"" Constant=""File""></Field>
                     <Field Name=""Where"" CopyFrom=""Computer""></Field>
+                    <Field Name=""New_Name"" Index = ""4""></Field>
                 </Event>
                 <Event EventID = ""563"">
                     <Field Name=""Who"" CopyFrom=""UserName""></Field>
